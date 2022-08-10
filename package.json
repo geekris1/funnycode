@@ -1,0 +1,30 @@
+{
+  "name": "@geekris1/uncode",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node bin/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geekris1/uncode.git"
+  },
+  "bin": {
+    "uncode": "bin/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/geekris1/uncode/issues"
+  },
+  "homepage": "https://github.com/geekris1/uncode#readme",
+  "type": "module",
+  "devDependencies": {
+    "crypto-js": "^4.1.1",
+    "fast-glob": "^3.2.11",
+    "javascript-obfuscator": "^4.0.0",
+    "minimist": "^1.2.6"
+  }
+}
