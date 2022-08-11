@@ -1,10 +1,13 @@
 import { promises as fs } from 'fs'
+import { exit } from 'node:process'
 import path from 'path'
 import CryptoJS from 'crypto-js'
-import { CACHE_PATH, cwd, error, loadCache, winPath } from './utils.js'
-async function decode(key) {
+import ora from 'ora'
+
+import { CACHE_PATH, cwd, error, loadCache, winPath } from './utils'
+
+async function decode(key: string) {
   const cache = loadCache()
-  console.log(cache)
   if (!cache || Object.keys(cache).length === 0)
     error(3)
   const cacheArray = Object.entries(cache)
@@ -12,19 +15,17 @@ async function decode(key) {
     const [file, code] = c
     const decryptCode = crypto(code, key)
     await fs.writeFile(winPath(path.join(cwd, file)), decryptCode)
+    ora({ text: `done ${file}`, color: 'yellow' }).succeed()
   }
   await save()
 }
 
-function crypto(code, key) {
+function crypto(code: string, key: string) {
   return CryptoJS.AES.decrypt(code, key).toString(CryptoJS.enc.Utf8)
 }
 async function save() {
   await fs.writeFile(CACHE_PATH, '{}')
-  console.log('game over!')
+  exit(0)
 }
 
-function hanldeTypescript() {
-
-}
 export default decode
