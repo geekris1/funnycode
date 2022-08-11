@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.4",
   "packageManager": "pnpm@7.2.1",
-  "description": "",
+  "description": "obfuscation {js,ts,cjs,mjs} code",
   "author": "geekris1",
   "license": "MIT",
   "funding": "https://github.com/sponsors/geekris1",
@@ -13,7 +13,14 @@
     "url": "git+https://github.com/geekris1/funnycode.git"
   },
   "bugs": "https://github.com/geekris1/funnycode/issues",
-  "keywords": [],
+  "keywords": [
+    "javascript-obfuscator",
+    "obfuscator",
+    "defend",
+    "javascript",
+    "js",
+    "ts"
+  ],
   "sideEffects": false,
   "exports": {
     ".": {
@@ -48,6 +55,9 @@
       ]
     }
   },
+  "bin": {
+    "funnycode": "bin/index.js"
+  },
   "files": [
     "dist"
   ],
@@ -55,11 +65,21 @@
     "build": "unbuild",
     "dev": "unbuild --stub",
     "lint": "eslint .",
+    "eslint-fix": "eslint \"**/*\" --fix",
     "prepublishOnly": "nr build",
     "release": "bumpp && npm publish",
     "start": "esno bin/index.ts",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "fast-glob": "^3.2.11",
+    "javascript-obfuscator": "^4.0.0",
+    "json5": "^2.2.1",
+    "minimist": "^1.2.6",
+    "ora": "^6.1.2",
+    "unconfig": "^0.3.5"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.25.2",
@@ -77,17 +97,5 @@
     "unbuild": "^0.8.8",
     "vite": "^3.0.4",
     "vitest": "^0.19.1"
-  },
-  "dependencies": {
-    "crypto-js": "^4.1.1",
-    "fast-glob": "^3.2.11",
-    "javascript-obfuscator": "^4.0.0",
-    "json5": "^2.2.1",
-    "minimist": "^1.2.6",
-    "ora": "^6.1.2",
-    "unconfig": "^0.3.5"
-  },
-  "bin": {
-    "funnycode": "bin/index.js"
   }
 }

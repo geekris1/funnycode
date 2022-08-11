@@ -2,14 +2,14 @@
   "name": "js",
   "version": "1.0.0",
   "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
   "main": "index.js",
   "scripts": {
     "encode": "funnycode encode ./src",
     "decode": "funnycode decode ./src"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "funnycode": "workspace:^0.0.4"
   }
