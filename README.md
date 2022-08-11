@@ -6,7 +6,7 @@
 
 ## 🤔️ Why
 
-处于某些原因，你会希望你的代码变得不可读，所以你会用到它的。
+出于某些原因，你会希望你的代码变得不可读，所以你会用到它的。
 
 ## 🚀 Features
 
@@ -35,7 +35,7 @@ pnpm add -D funnycode
 
 在根目录新建一个`.funnycode`文件，并在里面直接输入你要设置的 key
 
-> ps: 记得将`.funnycode`添加到`.gitignore`
+> tip: 记得将 .funnycode 添加到 .gitignore 中
 
 如果你不想添加文件，你可以通过对应的命令属于 key
 
@@ -57,19 +57,29 @@ funnycode -key <你的key>
   - 描述 : 需要进行编译的文件
 
 ```javascript
-module.exports ={
-    // 文件夹 会处理文件内所有js,ts,cjs,mjs文件
-  	entry:["./src"]
-  	// 处理单个文件
-    entry:["./src/index.js"]
-    // 也可以这样 请确保后缀是js文件
-    entry:['./src/**/*.{js,ts,cjs,mjs}']
-}
+module.exports = {
+  // 文件夹 会处理文件内所有js,ts,cjs,mjs文件
+  entry: ["./src"],
+};
+```
+
+```javascript
+module.exports = {
+  // 处理单个文件
+  entry: ["./src/index.js"],
+};
+```
+
+```javascript
+module.exports = {
+  // 也可以这样 请确保后缀是js文件
+  entry: ["./src/**/*.{js,ts,cjs,mjs}"],
+};
 ```
 
 ### Use encode
 
-如果你配置了`.funnycode`和`funntcode.config`
+如果你配置了`.funnycode`和`funnycode.config`
 
 ```js
 pnpm funnycode encode
@@ -81,15 +91,21 @@ pnpm funnycode encode
 pnpm funnycode encode ./src
 ```
 
-如果你配置`funntcode.config`
+如果你配置`funnycode.config`
 
 ```js
 pnpm funnucode encode -k <你的key>
 ```
 
+如果你没有任何配置
+
+```js
+pnpm funnucode encode ./src -k <你的key>
+```
+
 ### Use decode
 
-如果你配置了`.funnycode`和`funntcode.config`
+如果你配置了`.funnycode`和`funnycode.config`
 
 ```js
 pnpm funnycode decode
@@ -101,10 +117,16 @@ pnpm funnycode decode
 pnpm funnycode decode ./src
 ```
 
-如果你配置`funntcode.config`
+如果你配置`funnycode.config`
 
 ```js
 pnpm funnucode decode -k <你的key>
+```
+
+如果你没有任何配置
+
+```js
+pnpm funnucode decode ./src -k <你的key>
 ```
 
 ## 🐼 Author
