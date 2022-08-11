@@ -1,18 +1,28 @@
-lockfileVersion: 5.3
+lockfileVersion: 5.4
 
 specifiers:
   crypto-js: ^4.1.1
   fast-glob: ^3.2.11
   javascript-obfuscator: ^4.0.0
   minimist: ^1.2.6
+  typescript: ^4.7.4
+  unconfig: ^0.3.5
+
+dependencies:
+  unconfig: 0.3.5
 
 devDependencies:
   crypto-js: 4.1.1
   fast-glob: 3.2.11
   javascript-obfuscator: 4.0.0
   minimist: 1.2.6
+  typescript: 4.7.4
 
 packages:
+
+  /@antfu/utils/0.5.2:
+    resolution: {integrity: sha512-CQkeV+oJxUazwjlHD0/3ZD08QWKuGQkhnrKo3e6ly5pd48VUpXbb77q0xMU4+vc2CkJnDS02Eq/M9ugyX20XZA==}
+    dev: false
 
   /@javascript-obfuscator/escodegen/2.3.0:
     resolution: {integrity: sha512-QVXwMIKqYMl3KwtTirYIA6gOCiJ0ZDtptXqAv/8KWLG9uQU2fZqTVy7a/A5RvcoZhbDoFfveTxuGxJ5ibzQtkw==}
@@ -194,6 +204,10 @@ packages:
       has-property-descriptors: 1.0.0
       object-keys: 1.1.1
     dev: true
+
+  /defu/6.0.0:
+    resolution: {integrity: sha512-t2MZGLf1V2rV4VBZbWIaXKdX/mUcYW0n2znQZoADBkGGxYL8EWqCuCZBmJPJ/Yy9fofJkyuuSuo5GSwo0XdEgw==}
+    dev: false
 
   /es-abstract/1.20.1:
     resolution: {integrity: sha512-WEm2oBhfoI2sImeM4OF2zE2V3BYdSF+KnSi9Sidz51fQHd7+JuF8Xgcj9/0o+OWeIeIS/MiuNnlruQrJf16GQA==}
@@ -561,6 +575,11 @@ packages:
       tslib: 2.3.1
     dev: true
 
+  /jiti/1.14.0:
+    resolution: {integrity: sha512-4IwstlaKQc9vCTC+qUXLM1hajy2ImiL9KnLvVYiaHOtS/v3wRjhLlGl121AmgDgx/O43uKmxownJghS5XMya2A==}
+    hasBin: true
+    dev: false
+
   /js-string-escape/1.0.1:
     resolution: {integrity: sha512-Smw4xcfIQ5LVjAOuJCvN/zIodzA/BBSsluuoSykP+lUvScIi4U6RJLfwHet5cxFnCswUjISV8oAXaqaJDY3chg==}
     engines: {node: '>= 0.8'}
@@ -788,6 +807,12 @@ packages:
       prelude-ls: 1.1.2
     dev: true
 
+  /typescript/4.7.4:
+    resolution: {integrity: sha512-C0WQT0gezHuw6AdY1M2jxUO83Rjf0HP7Sk1DtXj6j1EwkQNZrHAg2XPWlq62oqEhYvONq5pkC2Y9oPljWToLmQ==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
+    dev: true
+
   /unbox-primitive/1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==}
     dependencies:
@@ -796,6 +821,14 @@ packages:
       has-symbols: 1.0.3
       which-boxed-primitive: 1.0.2
     dev: true
+
+  /unconfig/0.3.5:
+    resolution: {integrity: sha512-YMnPPUSfW0pT4Zzy4inM8tRHJZmhH+KcuFW/3qxkLKPhswEw18gQYe1jt57jY6ctFB0fnpiCpQ2Jtkbg4y/IPA==}
+    dependencies:
+      '@antfu/utils': 0.5.2
+      defu: 6.0.0
+      jiti: 1.14.0
+    dev: false
 
   /util/0.12.4:
     resolution: {integrity: sha512-bxZ9qtSlGUWSOy9Qa9Xgk11kSslpuZwaxCg4sNIDj6FLucDab2JxnHwyNTCpHMtK1MjoQiWQ6DiUMZYbSrO+Sw==}
