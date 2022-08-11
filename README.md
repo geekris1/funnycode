@@ -94,40 +94,19 @@ pnpm funnycode encode ./src
 如果你配置`funnycode.config`
 
 ```bash
-pnpm funnucode encode -k <你的key>
+pnpm funnycode encode -k <你的key>
 ```
 
 如果你没有任何配置
 
 ```bash
-pnpm funnucode encode ./src -k <你的key>
+pnpm funnycode encode ./src -k <你的key>
 ```
 
 ### Use decode
 
-如果你配置了`.funnycode`和`funnycode.config`
+同上，只需要把`encode`改成`decode`
 
-```bash
-pnpm funnycode decode
-```
-
-如果你配置了`.funnycode`
-
-```bash
-pnpm funnycode decode ./src
-```
-
-如果你配置`funnycode.config`
-
-```bash
-pnpm funnucode decode -k <你的key>
-```
-
-如果你没有任何配置
-
-```bash
-pnpm funnucode decode ./src -k <你的key>
-```
 
 ## 🐼 Author
 
