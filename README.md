@@ -1,4 +1,4 @@
-# funnucode
+# funnycode
 
 [![NPM version](https://badge.fury.io/js/funnycode.png)](https://www.npmjs.com/package/funnycode)
 
@@ -37,7 +37,7 @@ pnpm add -D funnycode
 
 > tip: 记得将 .funnycode 添加到 .gitignore 中
 
-如果你不想添加文件，你可以通过对应的命令属于 key
+如果你不想添加文件，你可以通过对应的命令输入 key
 
 ```
 funnycode -k <你的key>
