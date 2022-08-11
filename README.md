@@ -81,25 +81,25 @@ module.exports = {
 
 如果你配置了`.funnycode`和`funnycode.config`
 
-```js
+```bash
 pnpm funnycode encode
 ```
 
 如果你配置了`.funnycode`
 
-```js
+```bash
 pnpm funnycode encode ./src
 ```
 
 如果你配置`funnycode.config`
 
-```js
+```bash
 pnpm funnucode encode -k <你的key>
 ```
 
 如果你没有任何配置
 
-```js
+```bash
 pnpm funnucode encode ./src -k <你的key>
 ```
 
@@ -107,25 +107,25 @@ pnpm funnucode encode ./src -k <你的key>
 
 如果你配置了`.funnycode`和`funnycode.config`
 
-```js
+```bash
 pnpm funnycode decode
 ```
 
 如果你配置了`.funnycode`
 
-```js
+```bash
 pnpm funnycode decode ./src
 ```
 
 如果你配置`funnycode.config`
 
-```js
+```bash
 pnpm funnucode decode -k <你的key>
 ```
 
 如果你没有任何配置
 
-```js
+```bash
 pnpm funnucode decode ./src -k <你的key>
 ```
 
