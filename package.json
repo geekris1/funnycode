@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/geekris1/uncode.git"
+    "url": "git+https://github.com/geekris1/funnycode.git"
   },
   "bin": {
     "funnycode": "bin/index.js"
@@ -19,9 +19,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/geekris1/uncode/issues"
+    "url": "https://github.com/geekris1/funnycode/issues"
   },
-  "homepage": "https://github.com/geekris1/uncode#readme",
+  "homepage": "https://github.com/geekris1/funnycode#readme",
   "type": "module",
   "devDependencies": {
     "crypto-js": "^4.1.1",
