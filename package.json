@@ -1,0 +1,93 @@
+{
+  "name": "funnycode",
+  "type": "module",
+  "version": "0.0.4",
+  "packageManager": "pnpm@7.2.1",
+  "description": "",
+  "author": "geekris1",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/geekris1",
+  "homepage": "https://github.com/geekris1/funnycode#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geekris1/funnycode.git"
+  },
+  "bugs": "https://github.com/geekris1/funnycode/issues",
+  "keywords": [],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    },
+    "./utils": {
+      "types": "./dist/utils.d.ts",
+      "require": "./dist/utils.cjs",
+      "import": "./dist/utils.mjs"
+    },
+    "./encode": {
+      "types": "./dist/encode.d.ts",
+      "require": "./dist/encode.cjs",
+      "import": "./dist/encode.mjs"
+    },
+    "./decode": {
+      "types": "./dist/decode.d.ts",
+      "require": "./dist/decode.cjs",
+      "import": "./dist/decode.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint .",
+    "prepublishOnly": "nr build",
+    "release": "bumpp && npm publish",
+    "start": "esno bin/index.ts",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.25.2",
+    "@antfu/ni": "^0.17.2",
+    "@antfu/utils": "^0.5.2",
+    "@types/crypto-js": "^4.1.1",
+    "@types/minimist": "^1.2.2",
+    "@types/node": "^18.6.2",
+    "bumpp": "^8.2.1",
+    "eslint": "^8.20.0",
+    "funnycode": "workspace:^0.0.4",
+    "pnpm": "^7.6.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.7.4",
+    "unbuild": "^0.8.8",
+    "vite": "^3.0.4",
+    "vitest": "^0.19.1"
+  },
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "fast-glob": "^3.2.11",
+    "javascript-obfuscator": "^4.0.0",
+    "json5": "^2.2.1",
+    "minimist": "^1.2.6",
+    "ora": "^6.1.2",
+    "unconfig": "^0.3.5"
+  },
+  "bin": {
+    "funnycode": "bin/index.js"
+  }
+}
