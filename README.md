@@ -1,5 +1,7 @@
 # funnucode
 
+[![NPM version](https://badge.fury.io/js/funnycode.png)](https://www.npmjs.com/package/funnycode)
+
 一个让你的代码变得不可读的库。
 
 ## 🤔️ Why
@@ -21,7 +23,7 @@ pnpm add -D funnycode
 
 ### Add `package.json`
 
-```
+```javascript
 {
   "scripts":{
    	"funnycode":"funnycode"
@@ -69,19 +71,19 @@ module.exports ={
 
 如果你配置了`.funnycode`和`funntcode.config`
 
-```
+```js
 pnpm funnycode encode
 ```
 
 如果你配置了`.funnycode`
 
-```
+```js
 pnpm funnycode encode ./src
 ```
 
 如果你配置`funntcode.config`
 
-```
+```js
 pnpm funnucode encode -k <你的key>
 ```
 
@@ -89,22 +91,22 @@ pnpm funnucode encode -k <你的key>
 
 如果你配置了`.funnycode`和`funntcode.config`
 
-```
+```js
 pnpm funnycode decode
 ```
 
 如果你配置了`.funnycode`
 
-```
+```js
 pnpm funnycode decode ./src
 ```
 
 如果你配置`funntcode.config`
 
-```
+```js
 pnpm funnucode decode -k <你的key>
 ```
 
-## Author
+## 🐼 Author
 
 [geekris1](https://github.com/geekris1)
