@@ -7,7 +7,7 @@ import ts from 'typescript'
 
 import { CACHE_PATH, cwd, error, getKey, isDir, isUnixBashShellPath, loadCache, winPath } from './utils.js'
 const cache = loadCache()
-async function encode(entry, key) {
+async function encode(entry: string, key: string) {
   let files
   if (isUnixBashShellPath(entry) || !isDir(winPath(path.join(cwd, entry))))
     files = await fg(entry)
@@ -20,7 +20,7 @@ async function encode(entry, key) {
   await save()
 }
 // TODO : handle ts(extname) file
-async function transform(file, key) {
+async function transform(file: string, key: string) {
   const absolutePath = winPath(path.join(cwd, file))
   let code = await fs.readFile(absolutePath, 'utf8')
   if (/funnycode/.test(code)) {
@@ -40,16 +40,16 @@ ${funnycode}
   }
 }
 
-function crypto(code, key) {
+function crypto(code: string, key: string) {
   // Encrypt
   return CryptoJS.AES.encrypt(code, key).toString()
 }
-function obfuscator(code) {
+function obfuscator(code: string) {
   const obfuscationResult = JavaScriptObfuscator.obfuscate(code)
   return obfuscationResult.getObfuscatedCode()
 }
 
-async function toJavascript(code) {
+async function toJavascript(code: string) {
   const { compilerOptions = {} } = JSON.parse(await fs.readFile(winPath(path.join(cwd, 'tsconfig.json')), 'utf8'))
   const { outputText } = ts.transpileModule(code, { compilerOptions: { module: compilerOptions.module } })
   return outputText

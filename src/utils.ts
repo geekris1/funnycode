@@ -8,16 +8,16 @@ export const KEYFILE = '.funnycode'
 export const CONFIG = 'funnycode.config'
 export const CACHE_PATH = winPath(path.join(cwd, 'funnycode.cache.json'))
 
-export function isDir(path) {
-  return fs.lstatSync(path).isDirectory()
+export function isDir(url: string) {
+  return fs.lstatSync(url).isDirectory()
 }
 
 // src/**/*.*
-export function isUnixBashShellPath(path) {
-  return /\/?\*{1,2}\/?/.test(path)
+export function isUnixBashShellPath(url: string) {
+  return /\/?\*{1,2}\/?/.test(url)
 }
-export function winPath(path) {
-  return path.replace(/\\/g, '/')
+export function winPath(url: string) {
+  return url.replace(/\\/g, '/')
 }
 
 const errorMessage = {
@@ -26,7 +26,7 @@ const errorMessage = {
   2: 'Can not find key, Please use funnycode encode/decode <path> --key <key> Or add .funnycode file',
   3: 'Please encode first , funnycode encode <path>',
 }
-export function error(code) {
+export function error(code: 0 | 1 | 2 | 3) {
   console.error(errorMessage[code])
   process.exit(1)
 }
@@ -41,7 +41,7 @@ export function getKey() {
   return key
 }
 
-let cache
+let cache: any
 export function loadCache() {
   if (cache)
     return cache

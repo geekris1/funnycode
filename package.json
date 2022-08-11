@@ -1,6 +1,5 @@
 {
   "name": "funnycode",
-  "type": "module",
   "version": "0.0.3",
   "description": "",
   "author": "",
@@ -13,29 +12,46 @@
   "bugs": {
     "url": "https://github.com/geekris1/funnycode/issues"
   },
-  "keywords": [],
-  "main": "index.js",
-  "bin": {
-    "funnycode": "bin/index.js"
+  "keywords": [
+    "funnycode"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
   },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "dev": "node bin/index.js",
-    "test": "node test/index.js",
-    "test1": "node test.index",
+    "dev": "esno ./src/index.ts",
+    "test": "vitest --u",
+    "build": "pkgroll",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "crypto-js": "^4.1.1",
+    "fast-glob": "^3.2.11",
+    "javascript-obfuscator": "^4.0.0",
+    "minimist": "^1.2.6",
     "unconfig": "^0.3.5"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.26.1",
-    "crypto-js": "^4.1.1",
+    "@types/crypto-js": "^4.1.1",
+    "@types/minimist": "^1.2.2",
+    "@types/node": "^18.7.1",
     "eslint": "^8.21.0",
-    "fast-glob": "^3.2.11",
-    "javascript-obfuscator": "^4.0.0",
-    "minimist": "^1.2.6",
-    "typescript": "^4.7.4"
+    "esno": "^0.16.3",
+    "pkgroll": "^1.4.0",
+    "typescript": "^4.7.4",
+    "vitest": "^0.21.1"
   },
   "eslintConfig": {
     "extends": "@antfu"

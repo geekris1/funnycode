@@ -2,7 +2,7 @@ import { promises as fs } from 'fs'
 import path from 'path'
 import CryptoJS from 'crypto-js'
 import { CACHE_PATH, cwd, error, loadCache, winPath } from './utils.js'
-async function decode(key) {
+async function decode(key: string) {
   const cache = loadCache()
   console.log(cache)
   if (!cache || Object.keys(cache).length === 0)
@@ -10,13 +10,13 @@ async function decode(key) {
   const cacheArray = Object.entries(cache)
   for (const c of cacheArray) {
     const [file, code] = c
-    const decryptCode = crypto(code, key)
+    const decryptCode = crypto(code as string, key)
     await fs.writeFile(winPath(path.join(cwd, file)), decryptCode)
   }
   await save()
 }
 
-function crypto(code, key) {
+function crypto(code: string, key: string) {
   return CryptoJS.AES.decrypt(code, key).toString(CryptoJS.enc.Utf8)
 }
 async function save() {
