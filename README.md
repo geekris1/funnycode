@@ -123,5 +123,4 @@ pnpm funnycode encode ./src -k <你的key>
 ## 📖 Template
 
 模板来自于 [starter-ts](https://github.com/geekris1/starter-ts)
-模板lai zu
 
