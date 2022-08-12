@@ -11,6 +11,6 @@
     "decode": "funnycode decode ./src"
   },
   "dependencies": {
-    "funnycode": "workspace:^0.0.4"
+    "funnycode": "workspace:^0.1.0"
   }
 }
