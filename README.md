@@ -1,8 +1,12 @@
 # funnycode
 
-![组合 1 (2)](https://user-images.githubusercontent.com/35247521/184304011-6159b7bd-1b26-4e7c-8f94-1354378503ca.png)
+<p align="center">
+<img height="150" src="https://user-images.githubusercontent.com/35247521/184304011-6159b7bd-1b26-4e7c-8f94-1354378503ca.png" alt="funnycode">
+</p>
 
-[![NPM version](https://badge.fury.io/js/funnycode.png)](https://www.npmjs.com/package/funnycode)
+
+
+[![NPM version](https://img.shields.io/npm/v/funnycode?color=3fb883)](https://www.npmjs.com/package/funnycode)
 
 一个让你的代码变得不可读的库。
 
