@@ -1,7 +1,7 @@
 {
   "name": "funnycode",
   "type": "module",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "packageManager": "pnpm@7.2.1",
   "description": "obfuscation {js,ts,cjs,mjs} code",
   "author": "geekris1",
