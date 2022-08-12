@@ -5,7 +5,6 @@ import fg from 'fast-glob'
 import CryptoJS from 'crypto-js'
 import JavaScriptObfuscator from 'javascript-obfuscator'
 import ts from 'typescript'
-import ora from 'ora'
 import JSON5 from 'json5'
 
 import { CACHE_PATH, cwd, isDir, isUnixBashShellPath, loadCache, winPath } from './utils'
@@ -58,7 +57,7 @@ ${funnycode}`
 ${funnycode}`
 
         await fs.writeFile(absolutePath, funnycode)
-        ora({ text: `done ${file}`, color: 'yellow' }).succeed()
+        console.log(`done ${file}`)
       }
     }
   }

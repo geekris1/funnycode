@@ -2,7 +2,6 @@ import { promises as fs } from 'fs'
 import { exit } from 'node:process'
 import path from 'path'
 import CryptoJS from 'crypto-js'
-import ora from 'ora'
 
 import { CACHE_PATH, cwd, error, loadCache, winPath } from './utils'
 
@@ -15,7 +14,7 @@ async function decode(key: string) {
     const [file, code] = c
     const decryptCode = crypto(code, key)
     await fs.writeFile(winPath(path.join(cwd, file)), decryptCode)
-    ora({ text: `done ${file}`, color: 'yellow' }).succeed()
+    console.log(`done ${file}`)
   }
   await save()
 }
